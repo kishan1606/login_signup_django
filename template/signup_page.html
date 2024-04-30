@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Signup Page</title>
+  </head>
+  <body>
+    <h1>Signup From</h1>
+    <form action="#" method="post">
+      {% csrf_token %}
+      {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+        {% if ok_message %}
+            <p style="color: green;">{{ ok_message }}</p>
+        {% endif %}
+        <div class="container">
+          <div class="imgcontainer">
+          </div>
+          <label for="name"><b>Name : </b></label>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            name="name"
+            required
+          /><br />
+          <label for="user_name"><b>User Name :</b></label>
+          <input
+            type="text"
+            placeholder="Enter your user name"
+            name="user_name"
+            required
+          /><br />
+          <label for="email"><b>Email Id : </b></label>
+          <input
+            type="email"
+            placeholder="Enter email"
+            name="email"
+            required
+          /><br />
+          <label for="password"><b>Password : </b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="password"
+            required
+          /><br />
+          <button type="submit"><b>Signup</b></button><br />
+          Already an accounct <a href="http://localhost:9000/login/"> Login </a>
+        </div>
+    </form>
+  </body>
+</html>
